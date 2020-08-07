@@ -1,7 +1,7 @@
-# Code Smells
+# Code Smells : กลื่นตุๆ จากโค้ดเน่าเหม็น
 
-## Bloaters 
-Bloaters are code, methods and classes that have increased to such gargantuan proportions that they are hard to work with. Usually these smells do not crop up right away, rather they accumulate over time as the program evolves (and especially when nobody makes an effort to eradicate them).
+## Bloaters : อุ้ยอ้าย
+ฺBloaters เป็น code smells ที่เกิดจากโค้ด, เมธอด, และหรือคลาสต่างๆ มีขนาดใหญ่เกินไปจนทำงานด้วยยาก โดยปกติแล้ว code smells แบบนี้จะไม่เกิดขึ้นในทันที แต่เมื่อพัฒนาโปรแกรมไปเรื่อยๆ ปัญหานี้จะค่อยๆ สะสมจนมากและใหญ่ขึ้นเรื่อยๆ (และโดยเฉพาะอย่างยิ่งเมื่อไม่มีใครพยายามกำจัดมันทิ้งให้สิ้นซาก)
 + [Long Method](01-Bloaters/01-Long_Method.md)
 + [Large Class](01-Bloaters/02-Large_Class.md)
 + [Primitive Obsession](01-Bloaters/03-Primitive_Obsession.md)
