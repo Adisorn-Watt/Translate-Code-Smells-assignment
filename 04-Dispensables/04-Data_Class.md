@@ -12,9 +12,9 @@
 
 - หากคลาสมี public field ให้ใช้ [Encapsulate Field](https://sourcemaking.com/refactoring/encapsulate-field) เพื่อซ่อนไม่ให้เข้าถึงโดยตรงและกำหนดให้เข้าถึงได้ผ่าน getters และ setters เท่านั้น
 - ใช้ [Encapsulate Collection](https://sourcemaking.com/refactoring/encapsulate-collection) สำหรับข้อมูลที่จัดเก็บในคอลเลกชัน (เช่นอาร์เรย์)
-- ตรวจทานรหัสไคลเอ็นต์ที่ใช้โดยคลาส ในนั้นอาจพบฟังก์ชันการทำงานที่ดีกว่า หากเป็นกรณีนี้ให้ใช้ [Move Method](https://sourcemaking.com/refactoring/move-method) และ [Extract Method](https://sourcemaking.com/refactoring/extract-method) เพื่อย้ายฟังก์ชันนี้ไปยังคลาสข้อมูล
+- ตรวจทานไคลเอ็นต์โค้ดที่ใช้โดยคลาส ในนั้นอาจพบฟังก์ชันการทำงานที่ดีกว่า หากเป็นกรณีนี้ให้ใช้ [Move Method](https://sourcemaking.com/refactoring/move-method) และ [Extract Method](https://sourcemaking.com/refactoring/extract-method) เพื่อย้ายฟังก์ชันนี้ไปยังคลาสข้อมูล
 
 ### Payoff : ผลลัพธ์
 
 - ช่วยปรับปรุงความเข้าใจและการจัดระเบียบโค้ด ซึ่งการดำเนินการบนข้อมูลเฉพาะจะถูกรวบรวมไว้ในที่เดียว
-- ช่วยให้เห็นการซ้ำซ้อนของรหัสไคลเอนต์
+- ช่วยให้เห็นการซ้ำซ้อนของไคลเอนต์โค้ด
