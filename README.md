@@ -21,8 +21,8 @@ These smells mean that if you need to change something in one place in your code
 + [Shotgun Surgery](03-Change_Preventers/02-Shotgun_Surgery.md)
 + [Parallel Inheritance Hierarchies](03-Change_Preventers/03-Parallel_Inheritance_Hierarchies.md)
 
-## Dispensables
-A dispensable is something pointless and unneeded whose absence would make the code cleaner, more efficient and easier to understand.
+## Dispensables : ความไม่จำเป็น
+Dispensable คือบางอย่างที่ไม่มีความจำเป็น และไร้จุดหมาย ซึ่งสิ่งเหล่านี้จะทำให้โค้ดของเราไม่เป็นระเบียบและไม่มีประโยชน์ หากเราสามารถจัดการกับสิ่งเหล่านี้ได้ก็จะทำให้โค้ดสะอาดมากขึ้น มีประสิทธิภาพ และเข้าใจได้ง่ายขึ้น
 + [Comments](04-Dispensables/01-Comments.md)
 + [Duplicate Code](04-Dispensables/02-Duplicate_Code.md)
 + [Lazy Class](04-Dispensables/03-Lazy_Class.md)
