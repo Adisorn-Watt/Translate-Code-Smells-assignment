@@ -32,4 +32,4 @@
 ##### When to ignore (เมื่อไรที่ควรเมิน)
 
 - เมื่อตัวดำเนินการ `switch` แสดง actions ง่ายๆไม่ซับซ้อน มันก็ไม่มีเหตุผลอะไรที่ต้องแก้ code
-- ตัวดำเนินการ `switch` ส่วนมากถูกใช้โดย patterns ที่ได้รับการออกแบบมาแล้ว(**[Factory Method](https://sourcemaking.com/design_patterns/factory_method)** และ **[Abstract Factory](https://sourcemaking.com/design_patterns/abstract_factory)**) เพื่อเลือก class ที่สร้างขึ้น
+- เมื่อตัวดำเนินการ `switch` ถูกใช้บ่อยๆโดย patterns ที่ได้รับการออกแบบมาแล้ว(**[Factory Method](https://sourcemaking.com/design_patterns/factory_method)** และ **[Abstract Factory](https://sourcemaking.com/design_patterns/abstract_factory)**) เพื่อเลือก class ที่สร้างขึ้น
