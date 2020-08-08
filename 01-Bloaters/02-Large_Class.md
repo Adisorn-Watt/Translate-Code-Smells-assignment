@@ -2,6 +2,8 @@
 ### Signs and Symptoms : สัญญาณและอาการของปัญหา 
 เกิดจากคลาสที่ประกอบไปด้วย fields, method หรือบรรทัดของโค้ดมากเกินไป
     
+![large-class-1](https://sourcemaking.com/images/refactoring-illustrations/2x/large-class-1.png)
+    
 ### Reasons for the Problem : เหตุที่ทำให้เกิดปัญหานี้
 ในตอนเแรกๆ คลาสจะมีขนาดเล็ก แต่เมื่อเวลาผ่านไป ขนาดของมันจะใหญ่ขึ้นตามขนาดของโปรแกรมที่ใหญ่ขึ้นเรื่อยๆ
     
@@ -9,6 +11,8 @@
     
 ### Treatment : หนทางเยียวยาปัญหา
 เมื่อใดที่คลาสมีฟังก์ชันการทำงานเยอะเกินไป ให้หาทางแยกมันออกจากกัน
+    
+![large-class-2](https://sourcemaking.com/images/refactoring-illustrations/2x/large-class-2.png)
     
 + [Extract Class](https://sourcemaking.com/refactoring/extract-class)
 ใช้ในกรณีที่พฤติกรรมของคลาสที่ใหญ่เกินไปสามารถแยกออกเป็น component ที่แยกจากกันได้
@@ -23,5 +27,7 @@
     
 ### Payoff : ผลลัพธ์
 + การ refactor คลาสเหล่านี้ช่วยให้นักพัฒนาไม่จำเป็นต้องจำ attributes จำนวนมากมายที่ใช้สำหรับคลาส
+    
+![large-class-3](https://sourcemaking.com/images/refactoring-illustrations/2x/large-class-3.png)
     
 + ในหลายๆ กรณี การแบ่งคลาสที่ใหญ่ๆ ออกเป็นส่วนๆ เป็นการหลีกเลี่ยงความซ้ำซ้อนของโค้ดและฟังก์ชัน
