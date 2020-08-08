@@ -27,7 +27,7 @@
 
 ระบบของ code wfhiyได้รับการปรับปรุงให้ดีขึ้น
 
-![payoff](https://imgur.com/tm9ooTM.jpg)
+![payoff](https://imgur.com/PUyuEQv.jpg)
 
 ##### When to ignore (เมื่อไรที่ควรเมิน)
 
