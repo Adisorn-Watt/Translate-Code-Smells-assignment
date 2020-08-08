@@ -1,24 +1,27 @@
-## Large Class
-#### Signs and Symptoms
-A class contains many fields/methods/lines of code.
+## Large Class : คลาสใหญ่เกิ๊น
+### Signs and Symptoms : สัญญาณและอาการของปัญหา 
+เกิดจากคลาสที่ประกอบไปด้วย fields, method หรือบรรทัดของโค้ดมากเกินไป
     
-#### Reasons for the Problem
-Classes usually start small. But over time, they get bloated as the program grows.
+### Reasons for the Problem : เหตุที่ทำให้เกิดปัญหานี้
+ในตอนเแรกๆ คลาสจะมีขนาดเล็ก แต่เมื่อเวลาผ่านไป ขนาดของมันจะใหญ่ขึ้นตามขนาดของโปรแกรมที่ใหญ่ขึ้นเรื่อยๆ
     
-As is the case with long methods as well, programmers usually find it mentally less taxing to place a new feature in an existing class than to create a new class for the feature.
+เช่นเดียวกับในกรณีของปัญหา Long Method นั่นคือโปรแกรมเมอร์มักจะรู้สึกว่าการทำฟีเจอร์ใหม่ในคลาส ที่มีอยู่แล้วมันง่ายกว่าสร้างคลาสใหม่เพื่อฟีเจอร์นั้นๆ โดยเฉพาะ
     
-#### Treatment
-When a class is wearing too many (functional) hats, think about splitting it up:
+### Treatment : หนทางเยียวยาปัญหา
+เมื่อใดที่คลาสมีฟังก์ชันการทำงานเยอะเกินไป ให้หาทางแยกมันออกจากกัน
     
-+ [Extract Class](https://sourcemaking.com/refactoring/extract-class) helps if part of the behavior of the large class can be spun off into a separate component.
++ [Extract Class](https://sourcemaking.com/refactoring/extract-class)
+ใช้ในกรณีที่พฤติกรรมของคลาสที่ใหญ่เกินไปสามารถแยกออกเป็น component ที่แยกจากกันได้
     
-+ [Extract Subclass](https://sourcemaking.com/refactoring/extract-subclass) helps if part of the behavior of the large class can be implemented in different ways or is used in rare cases.
++ [Extract Subclass](https://sourcemaking.com/refactoring/extract-subclass)
+ใช้ในกรณีที่คลาสที่ใหญ่เกินไปสามารถ implement ในรูปแบบอื่นๆ ได้ หรือใช้ในกรณีหายาก
     
-+ [Extract Interface](https://sourcemaking.com/refactoring/extract-interface) helps if it is necessary to have a list of the operations and behaviors that the client can use.
++ [Extract Interface](https://sourcemaking.com/refactoring/extract-interface)
+ใช้ในกรณีที่จำเป็นที่จะต้องมีรายการการดำเนินการและ behavior ที่ลูกค้าใช้ได้
     
-+ If a large class is responsible for the graphical interface, you may try to move some of its data and behavior to a separate domain object. In doing so, it may be necessary to store copies of some data in two places and keep the data consistent. [Duplicate Observed Data](https://sourcemaking.com/refactoring/duplicate-observed-data) offers a way to do this.
++ ถ้าคลาสขนาดใหญ่มีหน้าที่ในส่วนของอินเทอร์เฟซแบบกราฟิก คุณอาจพยายามลองย้ายข้อมูลและพฤติกรรมบางอย่างไปยัง domain object ที่แยกออกไปต่างหาก ในการดำเนินการดังกล่าวอาจจำเป็นที่จะต้องจัดเก็บสำเนาของข้อมูลบางส่วนไว้ใน 2 ที่ และต้องเก็บข้อมูลให้สอดคล้องกัน ดังนี้ [Duplicate Observed Data](https://sourcemaking.com/refactoring/duplicate-observed-data)
     
-#### Payoff
-+ Refactoring of these classes spares developers from needing to remember a large number of attributes for a class.
+### Payoff : ผลลัพธ์
++ การ refactor คลาสเหล่านี้ช่วยให้นักพัฒนาไม่จำเป็นต้องจำ attributes จำนวนมากมายที่ใช้สำหรับคลาส
     
-+ In many cases, splitting large classes into parts avoids duplication of code and functionality.
++ ในหลายๆ กรณี การแบ่งคลาสที่ใหญ่ๆ ออกเป็นส่วนๆ เป็นการหลีกเลี่ยงความซ้ำซ้อนของโค้ดและฟังก์ชัน
