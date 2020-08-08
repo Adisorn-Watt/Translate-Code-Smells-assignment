@@ -23,7 +23,7 @@
 * ถ้ามีเงื่อนไขที่ไม่มากเกินไปในการดำเนินการและพวกมันเรียกใช้ method เดียวกันด้วย parameters ที่ไม่เหมือนกัน polymorphism จะเกินความต้องการ ในกรณีนี้ คุณสามารถทำลาย method นั้นเป็น method ที่เล็กกว่าเดิมด้วย **[Replace Parameter with Explicit Methods](https://sourcemaking.com/refactoring/replace-parameter-with-explicit-methods)** และเปลี่ยน `switch` ให้สอดคล้องกัน
 * ถ้าหนึ่งในทางเลือกเงื่อนไขเป็น `null` ให้ใช้ **[Introduce Null Object](https://sourcemaking.com/refactoring/introduce-null-object)**
 
-#### Payoff (ผลลัพธ์)
+### Payoff (ผลลัพธ์)
 
 ระบบของ code wfhiyได้รับการปรับปรุงให้ดีขึ้น
 
