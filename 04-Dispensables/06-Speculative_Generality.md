@@ -16,7 +16,7 @@
 
 ลองใช้ **[Collapse Hierarchy](https://sourcemaking.com/refactoring/collapse-hierarchy)** เพื่อลบ abstract code ที่ไม่ได้ใช้
 
-![Collapse Hierarchy](https://imgur.com/uExFhQ9)
+![Collapse Hierarchy](https://imgur.com/uExFhQ9.jpg)
 
 - การตั้ง function ที่ไม่จำเป็นไปยัง class อื่น สามารถกำจัดได้ผ่านทาง **[Inline Class](https://sourcemaking.com/refactoring/inline-class)**
 
