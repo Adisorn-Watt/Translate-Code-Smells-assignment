@@ -25,7 +25,7 @@
 
 ### Payoff (ผลลัพธ์)
 
-ระบบของ code wfhiyได้รับการปรับปรุงให้ดีขึ้น
+ระบบของ code ได้รับการปรับปรุงให้ดีขึ้น
 
 ![payoff](https://imgur.com/PUyuEQv.jpg)
 
