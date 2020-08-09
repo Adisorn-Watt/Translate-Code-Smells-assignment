@@ -26,5 +26,5 @@
     
 ![data-clumps-3](https://sourcemaking.com/images/refactoring-illustrations/data-clumps-3.png)
     
-### When to Ignore : เราสามารถใช้ comment ได้เมื่อไหร่?
+### When to Ignore : เมื่อไรที่เราควรจะเมินปัญหานี้
 การส่งผ่าน object ทั้งหมดใน parameter ของ method แทนที่จะส่งแค่ค่า (ชนิด primitive) อาจสร้างการพึ่งพากันที่ไม่พึงประสงค์ระหว่างคลาสทั้งสอง
