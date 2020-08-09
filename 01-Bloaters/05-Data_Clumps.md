@@ -12,7 +12,7 @@
 ### Treatment : หนทางเยียวยาปัญหา
 + หากการทำซ้ำข้อมูลประกอบด้วยฟิลด์ของคลาสให้ใช้ [Extract Class](https://sourcemaking.com/refactoring/extract-class)เพื่อย้าย field ไปยังคลาสของมันเอง
     
-+ หากมีการส่งกลุ่มข้อมูลเดียวกันใน parameter ของ method ให้ใช้  Introduce Parameter Object](https://sourcemaking.com/refactoring/introduce-parameter-object) เพื่อกำหนดให้พวกมันเป็น class
++ หากมีการส่งกลุ่มข้อมูลเดียวกันใน parameter ของ method ให้ใช้ [Introduce Parameter Object](https://sourcemaking.com/refactoring/introduce-parameter-object) เพื่อกำหนดให้พวกมันเป็น class
     
 + หากข้อมูลบางส่วนถูกส่งผ่านไปยัง method อื่นๆ ให้ลองใช้การส่งข้อมูลทั้งหมดเป็น object ไปยัง method อื่น แทนที่จะส่งไปเพียง field เดียว ซึ่งการ [Preserve Whole Object](https://sourcemaking.com/refactoring/preserve-whole-object) จะช่วยได้
 
