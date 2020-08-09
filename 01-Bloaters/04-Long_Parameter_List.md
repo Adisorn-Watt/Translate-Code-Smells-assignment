@@ -1,5 +1,5 @@
 ## Long Parameter List : จำนวน parameter ยาวเป็นหางว่าว
-### Signs and Symptoms
+### Signs and Symptoms : สัญญาณและอาการของปัญหา 
 มีมากกว่า 3 หรือ 4 parameters ใน method นั้นๆ
     
 ![long-parameter-list-1](https://sourcemaking.com/images/refactoring-illustrations/2x/long-parameter-list-1.png)
