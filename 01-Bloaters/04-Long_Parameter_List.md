@@ -1,25 +1,29 @@
 ## Long Parameter List
 #### Signs and Symptoms
-More than three or four parameters for a method.
+มีมากกว่า 3 หรือ 4 parameters ใน method นั้นๆ
+    
+![long-parameter-list-1](https://sourcemaking.com/images/refactoring-illustrations/2x/long-parameter-list-1.png)
     
 #### Reasons for the Problem
-A long list of parameters might happen after several types of algorithms are merged in a single method. A long list may have been created to control which algorithm will be run and how.
+การมี paramenters จำนวนมากเกินไปใน Method อาจจะเกิดขึ้นหลังจากอัลกอริทึมหลากหลายรูปแบบถูกรวมอยู่ใน method เพียงอันเดียว จำนวน parameters มากมายมหาศาลที่ว่านี้ อาจจะถูกสร้างขึ้นเพื่อควบคุมว่าอัลกอริทึมใดที่จะรันบ้าง แล้วรันอย่างไร
     
-Long parameter lists may also be the byproduct of efforts to make classes more independent of each other. For example, the code for creating specific objects needed in a method was moved from the method to the code for calling the method, but the created objects are passed to the method as parameters. Thus the original class no longer knows about the relationships between objects, and dependency has decreased. But if several of these objects are created, each of them will require its own parameter, which means a longer parameter list.
+paramenters ที่มีจำนวนมากเกินไปอาจเป็นผลพลอยได้จากความพยายามในการทำให้คลาสมีความเป็นอิสระจากกันและกันมากยิ่งขึ้น ตัวอย่างเช่น ย้ายโค้ดสำหรับสร้าง object เฉพาะที่จำเป็นใน method นั้นๆ โดยย้ายจาก method นั้นๆ  ไปยังโค้ดสำหรับการเรียกใช้ method นั้นๆ แทน, แต่ object ที่ถูกสร้างขึ้นมาส่งค่าเป็น parameters ดังนั้นคลาสดั้งเดิมจึงไม่รู้ว่าความสัมพันธ์ระหว่าง object เป็นอย่างไรอีกต่อไป และทำให้การพึ่งพากันระหว่างคลาสลดลง แต่หากมีการสร้าง object เหล่านี้หลายๆ ตัว และแต่ละตัวก็จำเป็นที่จะต้องมี parameter เฉพาะของมันเอง ก็จะทำให้จำนวน parameters มากขึ้น
     
-It is hard to understand such lists, which become contradictory and hard to use as they grow longer. Instead of a long list of parameters, a method can use the data of its own object. If the current object does not contain all necessary data, another object (which will get the necessary data) can be passed as a method parameter.
+จำนวน parameters ที่มากเกินไปจะทำให้ method เข้าใจได้ยาก ใช้งานงานได้ยาก และอาจจะขัดแย้งกันในตัวของมันเอง ดังนั้น แทนที่จะมีจำนวน parameters เยอะๆ ก็ให้ method ใช้ข้อมูลใน object ของตัวเองไปเลย ถ้า object ปัจจุบันไม่ได้มีข้อมูลที่จำเป็นทั้งหมด object อื่นๆ ซึ่งจะได้รับข้อมูลที่จำเป็น จะสามารถส่งค่าเป็น method parameter ได้
     
 #### Treatment
-Check what values are passed to parameters. If some of the arguments are just results of method calls of another object, use Replace Parameter with Method Call. This object can be placed in the field of its own class or passed as a method parameter.
+ให้เช็คว่าค่าอะไรที่ถูกส่งไปยัง parameters หาก arguments บางส่วนเป็นเพียงผลลัพธ์ของการเรียกใช้ method ของ object อื่นๆ ให้ใช้ [การแทนค่า parameter ด้วย method call (Replace Parameter with Method Call)](https://sourcemaking.com/refactoring/replace-parameter-with-method-call) ซึ่งทำให้ object ที่ว่านี้สามารถที่จะถูกวางไว้ใน field ของคลาสมันเองได้ หรือส่งผ่านเป็น method parameter
     
-+ Instead of passing a group of data received from another object as parameters, pass the object itself to the method, by using [Preserve Whole Object](https://sourcemaking.com/refactoring/preserve-whole-object).
+![long-parameter-list-2](https://sourcemaking.com/images/refactoring-illustrations/2x/long-parameter-list-2.png)
     
-+ If there are several unrelated data elements, sometimes you can merge them into a single parameter object via [Introduce Parameter Object](https://sourcemaking.com/refactoring/introduce-parameter-object).
++ แทนที่จะทำการส่งผ่านกลุ่มข้อมูลที่ได้รับมาจาก object อื่นๆ เป็น parameter ก็ให้ส่งเป็น object โดยใช้ [Preserve Whole Object](https://sourcemaking.com/refactoring/preserve-whole-object).
+    
++ ถ้าหากว่ามีองค์ประกอบข้อมูลที่ไม่เกี่ยวข้องกันอยู่หลายองค์ประกอบ บางครั้งคุณสามารถที่จะรวมองค์ประกอบเหล่านี้เป็น parameter object อันเดียวได้ ผ่านทาง [Introduce Parameter Object](https://sourcemaking.com/refactoring/introduce-parameter-object).
     
 #### Payoff
-+ More readable, shorter code.
++ อ่านเข้าใจง่ายขึ้น, โค้ดสั้นลง
     
-+ Refactoring may reveal previously unnoticed duplicate code.
++ การ refactor อาจจะทำให้ค้นพบโค้ดซ้ำซ้อนที่ไม่ได้สังเกตเห็นแต่แรกได้
     
 #### When to Ignore
-Do not get rid of parameters if doing so would cause unwanted dependency between classes.
+ห้ามกำจัด Parameters ทิ้ง หากทำจะทำให้เกิด depandency ที่ไม่พึงปรารถนาระหว่างคลาสได้
