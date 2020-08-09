@@ -1,25 +1,30 @@
-# Data Clumps
+# Data Clumps : การกระจุกตัวเป็นกลุ่มของข้อมูล
 ### Signs and Symptoms : สัญญาณและอาการของปัญหา 
-Sometimes different parts of the code contain identical groups of variables (such as parameters for connecting to a database). These clumps should be turned into their own classes.
+บางครั้งส่วนต่างๆ ของโค้ดจะประกอบไปด้วยกลุ่มของ variable ที่มีความเหมือนกัน (เช่น parameter สำหรับการเชื่อมต่อกับฐานข้อมูล) กลุ่มของโค้ดเหล่านี้ควรถูกเปลี่ยนเป็นคลาสของพวกมันเอง
+    
+![data-clumps-1](https://sourcemaking.com/images/refactoring-illustrations/data-clumps-1.png)
     
 ### Reasons for the Problem : เหตุที่ทำให้เกิดปัญหานี้
-Often these data groups are due to poor program structure or "copypasta programming”.
+บ่อยครั้งที่กลุ่มข้อมูลเหล่านี้เกิดจากโครงสร้างโปรแกรมที่ไม่ดีหรือเรียกเล่นๆ ว่า "การเขียนโปรแกรมแบบก็อปแปะ(copypasta programming)"
     
-If you want to make sure whether or not some data is a data clump, just delete one of the data values and see whether the other values still make sense. If this is not the case, this is a good sign that this group of variables should be combined into an object.
+หากคุณต้องการที่จะทำให้แน่ใจว่าข้อมูลบางส่วนเป็นกลุ่มข้อมูลกันหรือไม่ เพียงแค่ลบค่าของข้อมูลทิ้งไปค่าใดค่าหนึ่ง และดูว่าค่าที่เหลือยังสมเหตุสมผลอยู่หรือไม่ ถ้าไม่ ก็ควรที่จะรวม variable กลุ่มนี้ให้กลายเป็น object 
     
 ### Treatment : หนทางเยียวยาปัญหา
-+ If repeating data comprises the fields of a class, use [Extract Class](https://sourcemaking.com/refactoring/extract-class) to move the fields to their own class.
++ หากการทำซ้ำข้อมูลประกอบด้วยฟิลด์ของคลาสให้ใช้ [Extract Class](https://sourcemaking.com/refactoring/extract-class)เพื่อย้าย field ไปยังคลาสของมันเอง
     
-+ If the same data clumps are passed in the parameters of methods, use [Introduce Parameter Object](https://sourcemaking.com/refactoring/introduce-parameter-object) to set them off as a class.
++ หากมีการส่งกลุ่มข้อมูลเดียวกันใน parameter ของ method ให้ใช้  Introduce Parameter Object](https://sourcemaking.com/refactoring/introduce-parameter-object) เพื่อกำหนดให้พวกมันเป็น class
     
-+ If some of the data is passed to other methods, think about passing the entire data object to the method instead of just individual fields. [Preserve Whole Object](https://sourcemaking.com/refactoring/preserve-whole-object) will help with this.
++ หากข้อมูลบางส่วนถูกส่งผ่านไปยัง method อื่นๆ ให้ลองใช้การส่งข้อมูลทั้งหมดเป็น object ไปยัง method อื่น แทนที่จะส่งไปเพียง field เดียว ซึ่งการ [Preserve Whole Object](https://sourcemaking.com/refactoring/preserve-whole-object) จะช่วยได้
+
     
-+ Look at the code used by these fields. It may be a good idea to move this code to a data class.
++ ดูโค้ดที่ถูกใช้โดย field เหล่านี้ อาจจะเป็นไอเดียที่ดีที่จะย้ายโค้ดเหล่านี้ไปยังคลาสของข้อมูล
     
 ### Payoff : ผลลัพธ์
-+ Improves understanding and organization of code. Operations on particular data are now gathered in a single place, instead of haphazardly throughout the code.
++ ทำให้โค้ดเข้าใจง่าย และจัดการได้ง่ายขึ้น การดำเนินการกับข้อมูลที่เฉพาะเจาะจงถูกรวมอยู่ในที่เดียวกัน แทนที่จะกระจัดกระจายไปทั่วแบบมั่วซั่ว
     
-+ Reduces code size.
++ ลดขนาดของโค้ด.
+    
+![data-clumps-3](https://sourcemaking.com/images/refactoring-illustrations/data-clumps-3.png)
     
 ### When to Ignore : เราสามารถใช้ comment ได้เมื่อไหร่?
-Passing an entire object in the parameters of a method, instead of passing just its values (primitive types), may create an undesirable dependency between the two classes.
+การส่งผ่าน object ทั้งหมดใน parameter ของ method แทนที่จะส่งแค่ค่า (ชนิด primitive) อาจสร้างการพึ่งพากันที่ไม่พึงประสงค์ระหว่างคลาสทั้งสอง
