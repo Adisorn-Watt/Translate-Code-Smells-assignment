@@ -4,6 +4,6 @@
 
 code smell(กลิ่นตุๆ) นี้หมายความว่าถ้าคุณเปลี่ยนบางอย่างในที่ๆนึงของโค้ดของคุณ คุณจะต้องไปเปลี่ยนโค้ดในจุดๆอื่นด้วยซึ่งผลคือในการพัฒนาโปรแกรมนั้นจะซับซ้อนและยุ่งยาก
 
-- [Divergent Change](03-Change_Preventers/01-Divergent_Change.md)
-- [Shotgun Surgery](03-Change_Preventers/02-Shotgun_Surgery.md)
-- [Parallel Inheritance Hierarchies](03-Change_Preventers/03-Parallel_Inheritance_Hierarchies.md)
+- [Divergent Change](01-Divergent_Change.md)
+- [Shotgun Surgery](02-Shotgun_Surgery.md)
+- [Parallel Inheritance Hierarchies](03-Parallel_Inheritance_Hierarchies.md)

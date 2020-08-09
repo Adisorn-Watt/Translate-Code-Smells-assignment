@@ -1,6 +1,6 @@
 # Divergent Change : การเแลี่ยนแปลงที่แตกต่าง
 
-Divergent Change คล้ายคลึงกับ [Shotgun Surgery](03-Change_Preventers/02-Shotgun_Surgery.md) แต่จริงๆแล้วมันตรงข้ามกัน Divergent Change คือเมื่อมีการ change หลายๆครั้งในคลาสเดียวส่วน Shotgun Surgery จะพูดถึงเมื่อมี change นึงเกินขึ้นกับหลายๆคลาสพร้อมกัน
+Divergent Change คล้ายคลึงกับ [Shotgun Surgery](02-Shotgun_Surgery.md) แต่จริงๆแล้วมันตรงข้ามกัน Divergent Change คือเมื่อมีการ change หลายๆครั้งในคลาสเดียวส่วน Shotgun Surgery จะพูดถึงเมื่อมี change นึงเกินขึ้นกับหลายๆคลาสพร้อมกัน
 
 ## Signs and Symptoms : สัญญาณและอาการ
 

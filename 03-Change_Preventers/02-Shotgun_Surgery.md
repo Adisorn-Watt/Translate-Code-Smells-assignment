@@ -1,6 +1,6 @@
 # Shotgun Surgery : การผ่าตัดของปืนลูกซอง
 
-Shotgun Surgery คล้ายคลึงกับ [Divergent Change](03-Change_Preventers/02-Shotgun_Surgery.md) แต่จริงๆแล้วมันตรงข้ามกัน Divergent Change คือเมื่อมีการ change หลายๆครั้งในคลาสเดียวส่วน Shotgun Surgery จะพูดถึงเมื่อมี change นึงเกินขึ้นกับหลายๆคลาสพร้อมกัน
+Shotgun Surgery คล้ายคลึงกับ [Divergent Change](01-Divergent_Change.md.md) แต่จริงๆแล้วมันตรงข้ามกัน Divergent Change คือเมื่อมีการ change หลายๆครั้งในคลาสเดียวส่วน Shotgun Surgery จะพูดถึงเมื่อมี change นึงเกินขึ้นกับหลายๆคลาสพร้อมกัน
 
 ## Signs and Symptoms : สัญญาณและอาการ
 
