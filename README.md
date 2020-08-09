@@ -9,7 +9,7 @@
 + [Data Clumps](01-Bloaters/05-Data_Clumps.md)
 
 ## Object-Orientation Abusers
-All these smells are incomplete or incorrect application of object-oriented programming principles.
+กลิ่นเหม็นๆทั้งหมดนี้คือการใช้หลักการของ object-oriented programming ที่ไม่สมบูรณ์หรือไม่ถูกต้อง
 + [Switch Statements](02-Object-Orientation_Abusers/01-Switch_Statements.md)
 + [Temporary Field](02-Object-Orientation_Abusers/02-Temporary_Field.md)
 + [Refused Bequest](02-Object-Orientation_Abusers/03-Refused_Bequest.md)
