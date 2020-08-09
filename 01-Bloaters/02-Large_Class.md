@@ -28,6 +28,6 @@
 ### Payoff : ผลลัพธ์
 + การ refactor คลาสเหล่านี้ช่วยให้นักพัฒนาไม่จำเป็นต้องจำ attributes จำนวนมากมายที่ใช้สำหรับคลาส
     
-![large-class-3](https://sourcemaking.com/images/refactoring-illustrations/2x/large-class-3.png)
-    
 + ในหลายๆ กรณี การแบ่งคลาสที่ใหญ่ๆ ออกเป็นส่วนๆ เป็นการหลีกเลี่ยงความซ้ำซ้อนของโค้ดและฟังก์ชัน
+    
+![large-class-3](https://sourcemaking.com/images/refactoring-illustrations/2x/large-class-3.png)
