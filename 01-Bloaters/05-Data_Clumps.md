@@ -1,13 +1,13 @@
-## Data Clumps
-#### Signs and Symptoms
+# Data Clumps
+### Signs and Symptoms : สัญญาณและอาการของปัญหา 
 Sometimes different parts of the code contain identical groups of variables (such as parameters for connecting to a database). These clumps should be turned into their own classes.
     
-#### Reasons for the Problem
+### Reasons for the Problem : เหตุที่ทำให้เกิดปัญหานี้
 Often these data groups are due to poor program structure or "copypasta programming”.
     
 If you want to make sure whether or not some data is a data clump, just delete one of the data values and see whether the other values still make sense. If this is not the case, this is a good sign that this group of variables should be combined into an object.
     
-#### Treatment
+### Treatment : หนทางเยียวยาปัญหา
 + If repeating data comprises the fields of a class, use [Extract Class](https://sourcemaking.com/refactoring/extract-class) to move the fields to their own class.
     
 + If the same data clumps are passed in the parameters of methods, use [Introduce Parameter Object](https://sourcemaking.com/refactoring/introduce-parameter-object) to set them off as a class.
@@ -16,10 +16,10 @@ If you want to make sure whether or not some data is a data clump, just delete o
     
 + Look at the code used by these fields. It may be a good idea to move this code to a data class.
     
-#### Payoff
+### Payoff : ผลลัพธ์
 + Improves understanding and organization of code. Operations on particular data are now gathered in a single place, instead of haphazardly throughout the code.
     
 + Reduces code size.
     
-#### When to Ignore
+### When to Ignore : เราสามารถใช้ comment ได้เมื่อไหร่?
 Passing an entire object in the parameters of a method, instead of passing just its values (primitive types), may create an undesirable dependency between the two classes.
