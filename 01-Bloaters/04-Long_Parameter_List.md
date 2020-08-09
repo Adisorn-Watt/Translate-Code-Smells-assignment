@@ -1,4 +1,4 @@
-## Long Parameter List : จำนวน parameter ยาวเป็นหางว่าว
+# Long Parameter List : จำนวน parameter ยาวเป็นหางว่าว
 ### Signs and Symptoms : สัญญาณและอาการของปัญหา 
 มีมากกว่า 3 หรือ 4 parameters ใน method นั้นๆ
     
